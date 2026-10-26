@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.venv/
+.streamlit/secrets.toml
+# Gaussian outputs are large; do not commit them
+*.log
+*.out
+*.chk
+*.fchk
+*.zip
