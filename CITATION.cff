@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use ReorgLab in your research, please cite it as below."
+title: "ReorgLab: reorganization energies from Gaussian log files"
+type: software
+version: "1.0"
+date-released: "2026-10-26"
+license: MIT
+repository-code: "https://github.com/sania934/ReorgLab"
+authors:
+  - family-names: "Ismaeel"
+    given-names: "Sania"
+    orcid: "https://orcid.org/0009-0002-9516-4528"
+keywords:
+  - reorganization energy
+  - Marcus theory
+  - DFT
+  - hole transport materials
+  - Gaussian
