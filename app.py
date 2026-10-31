@@ -20,6 +20,7 @@ VERSION = "1.0"
 
 UNITS = {  # unit -> (Hartree factor, decimals)
     "eV": (rc.HARTREE_TO_EV, 4),
+    "Hartree": (1.0, 7),
     "meV": (rc.HARTREE_TO_EV * 1000, 1),
     "kcal/mol": (rc.HARTREE_TO_KCAL, 2),
 }
@@ -158,7 +159,7 @@ def html_table(df: pd.DataFrame, decimals: int, best: dict[str, str] | None = No
                 cells.append(f"<td><span class='rl-pill {'rl-ok' if ok else 'rl-warn'}'>"
                              f"{html.escape(str(val))}</span></td>")
             elif isinstance(val, float):
-                digits = 6 if "Hartree" in col else (3 if "RMSD" in col else decimals)
+                digits = 6 if col == "Energy (Hartree)" else (3 if "RMSD" in col else decimals)
                 cls = "num best" if best.get(col) == row["Molecule"] else "num"
                 cells.append(f"<td class='{cls}'>{val:.{digits}f}</td>")
             else:
